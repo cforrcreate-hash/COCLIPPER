@@ -124,7 +124,7 @@ const Pricing = () => {
               ))}
             </div>
             <div className="custom-footer">
-              <a href="https://discord.gg/coclipping" className="btn btn-secondary">Inquire About Custom Plan</a>
+              <a href="https://discordapp.com/users/1499545495931191301" className="btn btn-secondary">Inquire About Custom Plan</a>
             </div>
           </div>
         </div>
