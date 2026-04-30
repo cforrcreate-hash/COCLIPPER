@@ -1,0 +1,119 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 8rem;
+  position: relative;
+}
+
+.hero-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw;
+  height: 70vh;
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(0, 245, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(176, 38, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(0, 245, 255, 0.05) 0%, transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: clamp(3.5rem, 10vw, 6.5rem);
+  margin-bottom: 1.5rem;
+  letter-spacing: -2px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.heading-yt-logo {
+  position: absolute;
+  top: -20px;
+  right: -60px;
+  width: 80px;
+  animation: float 4s ease-in-out infinite;
+  mix-blend-mode: screen;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  max-width: 700px;
+  margin-bottom: 3rem;
+  line-height: 1.8;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.hero-visual {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--card-border);
+  position: relative;
+  aspect-ratio: 16/9;
+}
+
+.visual-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #0f172a, #1e1b4b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.visual-placeholder::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.play-btn-large {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.play-btn-large:hover {
+  transform: scale(1.1);
+  background: rgba(0, 255, 255, 0.2);
+}
+
+.text-white {
+  color: white;
+}

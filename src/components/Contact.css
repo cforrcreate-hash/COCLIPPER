@@ -1,0 +1,107 @@
+.contact-box {
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  border-color: rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.05);
+}
+
+.contact-subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .contact-links {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  justify-content: center;
+  border: 1px solid transparent;
+}
+
+.contact-btn.discord {
+  background: rgba(88, 101, 242, 0.1);
+  color: #5865F2;
+  border-color: rgba(88, 101, 242, 0.2);
+  box-shadow: 0 4px 0 rgba(88, 101, 242, 0.4);
+}
+
+.contact-btn.discord:hover {
+  background: #5865F2;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 rgba(60, 72, 192, 0.8), 0 10px 20px rgba(88, 101, 242, 0.3);
+}
+
+.contact-btn.discord:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 rgba(60, 72, 192, 0.8);
+}
+
+.contact-btn.email {
+  background: rgba(234, 67, 53, 0.1);
+  color: #EA4335;
+  border-color: rgba(234, 67, 53, 0.2);
+  box-shadow: 0 4px 0 rgba(234, 67, 53, 0.4);
+}
+
+.contact-btn.email:hover {
+  background: #EA4335;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 rgba(193, 44, 32, 0.8), 0 10px 20px rgba(234, 67, 53, 0.3);
+}
+
+.contact-btn.email:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 rgba(193, 44, 32, 0.8);
+}
+
+.contact-btn.twitter {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 0 rgba(255, 255, 255, 0.2);
+}
+
+.contact-btn.twitter:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 rgba(200, 200, 200, 0.8), 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.contact-btn.twitter:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 rgba(200, 200, 200, 0.8);
+}
+
+.footer {
+  text-align: center;
+  padding-top: 4rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}

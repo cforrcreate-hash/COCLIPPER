@@ -1,0 +1,41 @@
+import React from 'react';
+import { ArrowRight, Play } from 'lucide-react';
+import './Hero.css';
+
+const Hero = () => {
+  return (
+    <section className="hero">
+      <div className="hero-glow"></div>
+      <div className="container hero-container">
+        <span className="section-subtitle">Be Smart & Grow</span>
+        <h1 className="hero-title">
+          Clipping can save your <span className="gradient-text">CHANNEL.</span>
+          <img src="/src/assets/yt_logo.png" className="heading-yt-logo" alt="YouTube" />
+        </h1>
+        <p className="hero-description">
+          Transform your long-form gaming sessions into high-impact viral clips. 
+          We help creators grow 10x faster using the power of Shorts, Reels, and TikToks.
+        </p>
+        <div className="hero-cta">
+          <a href="#portfolio" className="btn btn-primary">
+            View Work <Play size={20} fill="currentColor" />
+          </a>
+          <a href="#contact" className="btn btn-secondary">
+            Get Started <ArrowRight size={20} />
+          </a>
+        </div>
+        
+        {/* Placeholder for Hero Video/Image */}
+        <div className="hero-visual">
+          <div className="visual-placeholder">
+            <div className="play-btn-large">
+              <Play size={40} fill="currentColor" className="text-white" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

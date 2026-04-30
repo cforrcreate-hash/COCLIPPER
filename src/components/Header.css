@@ -1,0 +1,123 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.header.scrolled {
+  background: rgba(11, 14, 20, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid var(--card-bg);
+  padding: 1rem 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-icon-svg {
+  color: var(--primary);
+  transform: rotate(-45deg);
+  animation: logoSnip 3s ease-in-out infinite;
+}
+
+@keyframes logoSnip {
+  0%, 100% { transform: rotate(-45deg) scale(1); }
+  40% { transform: rotate(-45deg) scale(1); }
+  50% { transform: rotate(-10deg) scale(1.2); }
+  60% { transform: rotate(-45deg) scale(1); }
+}
+
+.menu-toggle {
+  display: block;
+  background: transparent;
+  color: var(--text-color);
+  z-index: 1001;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100vh;
+  background: var(--bg-color);
+  padding: 8rem 2rem;
+  gap: 2rem;
+  transition: right 0.3s ease;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  border-left: 1px solid var(--card-bg);
+}
+
+.nav-links.open {
+  right: 0;
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    position: static;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    border-left: none;
+  }
+}
+
+.nav-links a {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+}
+
+.desktop-only {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktop-only {
+    display: inline-flex;
+  }
+}
+
+.mobile-only {
+  display: inline-flex;
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+}

@@ -1,0 +1,81 @@
+.advantages-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.adv-card {
+  flex: 1 1 300px;
+  max-width: 400px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.adv-icon {
+  margin-bottom: 1.5rem;
+  background: rgba(0, 245, 255, 0.1);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.adv-card:hover .adv-icon {
+  transform: scale(1.1) translateY(-5px);
+  background: rgba(0, 245, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+}
+
+/* Icon Animations */
+.adv-card:nth-child(1):hover .adv-icon svg { animation: pulse 1s infinite; }
+.adv-card:nth-child(2):hover .adv-icon svg { animation: spin 3s linear infinite; }
+.adv-card:nth-child(3):hover .adv-icon svg { animation: bounce 1s infinite; }
+.adv-card:nth-child(4):hover .adv-icon svg { animation: shake 0.5s infinite; }
+.adv-card:nth-child(5):hover .adv-icon svg { animation: heartbeat 1s infinite; }
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.3); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.3); }
+  70% { transform: scale(1); }
+}
+
+.adv-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.adv-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}

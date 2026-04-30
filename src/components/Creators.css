@@ -1,0 +1,90 @@
+.creators-section {
+  padding: 3rem 0;
+  background: rgba(15, 23, 42, 0.5);
+  border-top: 1px solid var(--card-border);
+  border-bottom: 1px solid var(--card-border);
+  overflow: hidden;
+}
+
+.creators-label {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.creators-track {
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.creators-list {
+  display: flex;
+  width: max-content;
+  gap: 4rem;
+  animation: scroll 20s linear infinite;
+}
+
+.creator-card {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.creator-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--primary-cyan);
+  transform: translateY(-2px);
+}
+
+.creator-pfp {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.creator-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.creator-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.creator-subs {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .creators-list {
+    gap: 2rem;
+  }
+  .creator-logo {
+    width: 60px;
+    height: 60px;
+  }
+}
