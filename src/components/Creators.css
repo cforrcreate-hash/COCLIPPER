@@ -12,7 +12,7 @@
   letter-spacing: 0.2rem;
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   margin-bottom: 2rem;
 }
 
@@ -42,7 +42,7 @@
 
 .creator-card:hover {
   background: rgba(255, 255, 255, 0.08);
-  border-color: var(--primary-cyan);
+  border-color: var(--primary);
   transform: translateY(-2px);
 }
 

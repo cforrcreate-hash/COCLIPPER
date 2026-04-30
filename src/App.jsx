@@ -46,13 +46,14 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <div className="app-wrapper" style={{ overflowX: 'hidden', position: 'relative' }}>
       {/* Custom Cursor Glow */}
       <div 
         className="cursor-glow" 
         style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px` }}
       ></div>
 
-      <div className="bg-characters">
+      <div className="bg-characters desktop-only">
         <img src="/src/assets/char1_transparent.png" className="bg-char bg-char-1" alt="" />
         <img src="/src/assets/char2_transparent.png" className="bg-char bg-char-2" alt="" />
         <img src="/src/assets/char3_transparent.png" className="bg-char bg-char-3" alt="" />
@@ -72,6 +73,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/pricing" element={<Pricing />} />
       </Routes>
+      </div>
     </Router>
   );
 }

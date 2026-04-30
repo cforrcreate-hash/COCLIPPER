@@ -3,10 +3,12 @@
   --text-color: #f8fafc;
   --text-muted: #94a3b8;
   --primary: #00f5ff; /* Electric Cyan */
+  --primary-cyan: #00f5ff;
   --secondary: #b026ff; /* Neon Purple */
   --accent: #ffd700; /* Gold */
   --card-bg: #151921;
   --card-border: rgba(255, 255, 255, 0.08);
+  --text-secondary: #94a3b8;
 }
 
 * {
@@ -15,13 +17,17 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
 body {
   font-family: 'Outfit', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
-  overflow-x: hidden;
-  position: relative;
   cursor: url('./assets/sword-cursor.png') 16 16, auto;
 }
 
@@ -61,10 +67,11 @@ body {
 .bg-char {
   position: absolute;
   width: 350px;
-  opacity: 0.25;
-  filter: none;
+  opacity: 0.2;
+  filter: blur(2px);
   animation: float 12s ease-in-out infinite;
   pointer-events: none;
+  transition: opacity 0.5s ease;
 }
 
 .bg-char-1 {
@@ -215,6 +222,18 @@ button {
 
 .gradient-text {
   color: var(--primary);
+}
+
+.text-cyan {
+  color: var(--primary-cyan);
+}
+
+.text-purple {
+  color: var(--secondary);
+}
+
+.text-muted {
+  color: var(--text-muted);
 }
 
 .section-padding {

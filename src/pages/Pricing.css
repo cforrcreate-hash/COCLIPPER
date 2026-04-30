@@ -97,6 +97,7 @@
   margin: 0 0 3rem 0;
   text-align: left;
   width: 100%;
+  max-width: 280px;
 }
 
 .plan-features li {
@@ -129,6 +130,7 @@
   margin-top: auto;
   color: #000;
   font-weight: 800;
+  white-space: nowrap;
 }
 
 /* Customized Section */
