@@ -3,6 +3,12 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Header from './components/Header';
 import Home from './pages/Home';
 import Pricing from './pages/Pricing';
+import char1 from './assets/char1_transparent.png';
+import char2 from './assets/char2_transparent.png';
+import char3 from './assets/char3_transparent.png';
+import char4 from './assets/char4_transparent.png';
+import silverPlay from './assets/silver_play.png';
+import goldPlay from './assets/gold_play.png';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -54,12 +60,12 @@ function App() {
       ></div>
 
       <div className="bg-characters desktop-only">
-        <img src="/src/assets/char1_transparent.png" className="bg-char bg-char-1" alt="" />
-        <img src="/src/assets/char2_transparent.png" className="bg-char bg-char-2" alt="" />
-        <img src="/src/assets/char3_transparent.png" className="bg-char bg-char-3" alt="" />
-        <img src="/src/assets/char4_transparent.png" className="bg-char bg-char-4" alt="" />
-        <img src="/src/assets/silver_play.png" className="bg-char bg-play-silver" alt="" />
-        <img src="/src/assets/gold_play.png" className="bg-char bg-play-gold" alt="" />
+        <img src={char1} className="bg-char bg-char-1" alt="" />
+        <img src={char2} className="bg-char bg-char-2" alt="" />
+        <img src={char3} className="bg-char bg-char-3" alt="" />
+        <img src={char4} className="bg-char bg-char-4" alt="" />
+        <img src={silverPlay} className="bg-char bg-play-silver" alt="" />
+        <img src={goldPlay} className="bg-char bg-play-gold" alt="" />
       </div>
 
       <a href="https://discord.gg/yourlink" className="discord-float" target="_blank" rel="noopener noreferrer">

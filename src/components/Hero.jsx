@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Play } from 'lucide-react';
+import ytLogo from '../assets/yt_logo.png';
 import './Hero.css';
 
 const Hero = () => {
@@ -10,7 +11,7 @@ const Hero = () => {
         <span className="section-subtitle">Be Smart & Grow</span>
         <h1 className="hero-title">
           Clipping can save your <span className="gradient-text">CHANNEL.</span>
-          <img src="/src/assets/yt_logo.png" className="heading-yt-logo" alt="YouTube" />
+          <img src={ytLogo} className="heading-yt-logo" alt="YouTube" />
         </h1>
         <p className="hero-description">
           Transform your long-form gaming sessions into high-impact viral clips. 

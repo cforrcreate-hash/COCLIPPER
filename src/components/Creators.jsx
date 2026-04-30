@@ -1,13 +1,18 @@
 import React from 'react';
 import './Creators.css';
+import foltyn from '../assets/foltyn.jpg';
+import ayeyahzee from '../assets/ayeyahzee.jpg';
+import nizarisaqt from '../assets/nizarisaqt.jpg';
+import myamberr from '../assets/myamberr.jpg';
+import chris from '../assets/chris.jpg';
 
 const Creators = () => {
   const creators = [
-    { name: 'Foltyn', handle: '@FoltynFamily', subs: '11M', logo: '/src/assets/foltyn.jpg', link: 'https://www.youtube.com/@FoltynFamily' },
-    { name: 'AyeYahZee', handle: '@AyeYahZee', subs: '2.16M', logo: '/src/assets/ayeyahzee.jpg', link: 'https://www.youtube.com/@AyeYahZee' },
-    { name: 'Nizarisaqt', handle: '@Nizarisacutie', subs: '2.24M', logo: '/src/assets/nizarisaqt.jpg', link: 'https://www.youtube.com/@Nizarisacutie' },
-    { name: 'Myamberr', handle: '@Myamberr', subs: '1.07M', logo: '/src/assets/myamberr.jpg', link: 'https://www.youtube.com/@Myamberr' },
-    { name: 'Chris', handle: '@chrisypeww', subs: '174K', logo: '/src/assets/chris.jpg', link: 'https://www.youtube.com/@chrisypeww' },
+    { name: 'Foltyn', handle: '@FoltynFamily', subs: '11M', logo: foltyn, link: 'https://www.youtube.com/@FoltynFamily' },
+    { name: 'AyeYahZee', handle: '@AyeYahZee', subs: '2.16M', logo: ayeyahzee, link: 'https://www.youtube.com/@AyeYahZee' },
+    { name: 'Nizarisaqt', handle: '@Nizarisacutie', subs: '2.24M', logo: nizarisaqt, link: 'https://www.youtube.com/@Nizarisacutie' },
+    { name: 'Myamberr', handle: '@Myamberr', subs: '1.07M', logo: myamberr, link: 'https://www.youtube.com/@Myamberr' },
+    { name: 'Chris', handle: '@chrisypeww', subs: '174K', logo: chris, link: 'https://www.youtube.com/@chrisypeww' },
   ];
 
   return (
