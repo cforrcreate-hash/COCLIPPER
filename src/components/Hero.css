@@ -113,24 +113,51 @@
   background-size: 20px 20px;
 }
 
-.play-btn-large {
-  width: 80px;
-  height: 80px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-  border-radius: 50%;
+.animated-script-container {
+  width: 80%;
+  height: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  cursor: pointer;
+  position: relative;
+  text-align: center;
   z-index: 2;
-  transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.play-btn-large:hover {
-  transform: scale(1.1);
-  background: rgba(0, 255, 255, 0.2);
+.animated-script-text {
+  position: absolute;
+  width: 100%;
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
+  font-weight: 600;
+  color: #ffffff;
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  text-shadow: 0 4px 20px rgba(0, 245, 255, 0.3);
+  line-height: 1.5;
+}
+
+.animated-script-text.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.script-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 3;
+}
+
+.script-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  transition: width 0.5s ease;
 }
 
 .text-white {
