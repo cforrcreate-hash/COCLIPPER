@@ -22,6 +22,19 @@
   }
 }
 
+.portfolio-grid-long {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .portfolio-grid-long {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .portfolio-item {
   border-radius: 1rem;
   overflow: hidden;
@@ -55,6 +68,15 @@
 .iframe-container {
   width: 100%;
   aspect-ratio: 9/16;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.iframe-container-long {
+  width: 100%;
+  aspect-ratio: 16/9;
   background: #000;
   position: relative;
   overflow: hidden;

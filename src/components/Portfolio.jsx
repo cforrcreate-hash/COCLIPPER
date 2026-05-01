@@ -29,6 +29,24 @@ const Portfolio = () => {
     },
   ];
 
+  const longFormProjects = [
+    {
+      title: 'AyeYahZee Highlight Edit',
+      videoId: 'cohhh8m68qI',
+      creator: 'AyeYahZee',
+    },
+    {
+      title: 'Nizari Funny Moments',
+      videoId: 'bO68dBI8bm8',
+      creator: 'Nizarisacutie',
+    },
+    {
+      title: 'MyAmberr Special Episode',
+      videoId: 'hXi7D2ZgZEs',
+      creator: 'MyAmberr',
+    }
+  ];
+
   return (
     <section id="portfolio" className="section-padding">
       <div className="container">
@@ -59,6 +77,34 @@ const Portfolio = () => {
                   <div className="view-stat">
                     <span className="stat-label">Long Form Views:</span>
                     <span className="stat-val text-cyan">{project.longViews}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="section-title" style={{ marginTop: '4rem', fontSize: '2rem' }}>Long Form <span className="gradient-text">Edits</span></h3>
+        <div className="portfolio-grid-long">
+          {longFormProjects.map((project, index) => (
+            <div key={index} className="portfolio-item">
+              <div className="portfolio-visual iframe-container-long">
+                <iframe 
+                  width="100%" 
+                  height="100%" 
+                  src={`https://www.youtube.com/embed/${project.videoId}?autoplay=1&mute=1&loop=1&playlist=${project.videoId}`} 
+                  title={project.title} 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="portfolio-info">
+                <h3>{project.title}</h3>
+                <div className="views-breakdown">
+                  <div className="view-stat">
+                    <span className="stat-label">Creator:</span>
+                    <span className="stat-val text-cyan">{project.creator}</span>
                   </div>
                 </div>
               </div>
