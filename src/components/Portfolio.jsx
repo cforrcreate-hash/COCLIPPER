@@ -42,7 +42,7 @@ const Portfolio = () => {
                 <iframe 
                   width="100%" 
                   height="100%" 
-                  src={`https://www.youtube.com/embed/${project.shortId}?autoplay=0&loop=1&playlist=${project.shortId}`} 
+                  src={`https://www.youtube.com/embed/${project.shortId}?autoplay=1&mute=1&loop=1&playlist=${project.shortId}`} 
                   title={project.title} 
                   frameBorder="0" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
