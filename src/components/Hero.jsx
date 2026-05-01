@@ -18,10 +18,10 @@ const Hero = () => {
           We help creators grow 10x faster using the power of Shorts, Reels, and TikToks.
         </p>
         <div className="hero-cta">
-          <a href="#portfolio" className="btn btn-primary">
+          <a href="https://discord.gg/GJWWBMdN" target="_blank" rel="noreferrer" className="btn btn-primary">
             View Work <Play size={20} fill="currentColor" />
           </a>
-          <a href="#contact" className="btn btn-secondary">
+          <a href="https://discord.gg/GJWWBMdN" target="_blank" rel="noreferrer" className="btn btn-secondary">
             Get Started <ArrowRight size={20} />
           </a>
         </div>
