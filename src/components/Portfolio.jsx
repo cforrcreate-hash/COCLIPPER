@@ -37,7 +37,12 @@ const Portfolio = () => {
     },
     {
       title: 'Nizari Funny Moments',
-      videoId: 'bO68dBI8bm8',
+      videoId: 'OVs1AwR6OuA',
+      creator: 'Nizarisacutie',
+    },
+    {
+      title: 'Nizari Epic Gameplay',
+      videoId: 'vIucImCIMFE',
       creator: 'Nizarisacutie',
     },
     {
