@@ -1,6 +1,6 @@
 import React from 'react';
 import './Pricing.css';
-import { Check, X, Scissors, Zap, Trophy, LayoutGrid, Youtube, Users, Film, Image, Handshake } from 'lucide-react';
+import { Check, X, Minus, Scissors, Zap, Trophy, LayoutGrid, Youtube, Users, Film, Image, Handshake } from 'lucide-react';
 
 const Pricing = () => {
   const plans = [
@@ -10,6 +10,8 @@ const Pricing = () => {
       duration: '/month',
       icon: <Scissors size={32} />,
       features: [
+        { text: 'Ideate 3-5 Shorts', included: true },
+        { text: 'Not Only Clipping', included: 'partial' },
         { text: '20 High-Quality Shorts', included: true },
         { text: 'YouTube Channel Management', included: false },
         { text: 'Uploading & SEO', included: false },
@@ -27,6 +29,8 @@ const Pricing = () => {
       icon: <Zap size={32} />,
       popular: true,
       features: [
+        { text: 'Ideate 8-12 Shorts', included: true },
+        { text: 'Not Only Clipping', included: 'partial' },
         { text: '40 Viral Shorts/Reels', included: true },
         { text: 'YouTube Channel Management', included: true },
         { text: 'Uploading & SEO', included: true },
@@ -43,6 +47,9 @@ const Pricing = () => {
       duration: '/month',
       icon: <Trophy size={32} />,
       features: [
+        { text: 'Ideate 15-20 Shorts', included: true },
+        { text: 'Hooks Provided', included: true },
+        { text: 'Not Only Clipping', included: 'partial' },
         { text: '60 Viral Shorts/Reels', included: true },
         { text: 'YouTube Channel Management', included: true },
         { text: 'Uploading & SEO', included: true },
@@ -89,8 +96,8 @@ const Pricing = () => {
               
               <ul className="plan-features">
                 {plan.features.map((feature, fIndex) => (
-                  <li key={fIndex} className={feature.included ? 'included' : 'excluded'}>
-                    {feature.included ? <Check size={18} className="feature-icon" /> : <X size={18} className="feature-icon" />}
+                  <li key={fIndex} className={feature.included === true ? 'included' : feature.included === 'partial' ? 'partial' : 'excluded'}>
+                    {feature.included === true ? <Check size={18} className="feature-icon" /> : feature.included === 'partial' ? <Minus size={18} className="feature-icon" /> : <X size={18} className="feature-icon" />}
                     <span>{feature.text}</span>
                   </li>
                 ))}

@@ -113,6 +113,10 @@
   opacity: 0.5;
 }
 
+.plan-features li.partial {
+  opacity: 0.8;
+}
+
 .feature-icon {
   flex-shrink: 0;
 }
@@ -123,6 +127,10 @@
 
 .excluded .feature-icon {
   color: #ff4444;
+}
+
+.partial .feature-icon {
+  color: #ffcc00;
 }
 
 .plan-cta {
