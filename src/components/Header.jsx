@@ -52,6 +52,7 @@ const Header = () => {
           <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('#case-study'); }}>Case Study</a>
           <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('#services'); }}>Services</a>
           <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('#portfolio'); }}>Portfolio</a>
+          <Link to="/pricing" style={{ opacity: 0, userSelect: 'none' }} onClick={() => setIsMenuOpen(false)}>Pricing</Link>
 
           <a href="https://discord.gg/GJWWBMdN" className="btn btn-primary nav-cta mobile-only">
             Discord
