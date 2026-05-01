@@ -39,6 +39,7 @@
 }
 
 .heading-yt-logo {
+  display: none;
   position: absolute;
   top: -15px;
   right: -20px;
@@ -49,6 +50,7 @@
 
 @media (min-width: 768px) {
   .heading-yt-logo {
+    display: block;
     top: -20px;
     right: -60px;
     width: 80px;
