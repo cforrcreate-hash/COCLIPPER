@@ -4,7 +4,7 @@ const Impact = () => {
   const stats = [
     { value: '10+', label: 'Happy Clients' },
     { value: '300+', label: 'Projects Completed' },
-    { value: '3', label: 'Years of Experience' },
+    { value: '5+', label: 'Years of Experience' },
   ];
 
   return (
