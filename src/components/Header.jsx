@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Scissors } from 'lucide-react';
 import './Header.css';
 
@@ -16,10 +16,18 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const navigate = useNavigate();
+
   const scrollToSection = (id) => {
     setIsMenuOpen(false);
     if (location.pathname !== '/') {
-      window.location.href = `/${id}`;
+      navigate('/');
+      setTimeout(() => {
+        const element = document.querySelector(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
     } else {
       const element = document.querySelector(id);
       if (element) {
@@ -41,9 +49,9 @@ const Header = () => {
         </button>
 
         <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-          <a href="/#case-study" onClick={(e) => { e.preventDefault(); scrollToSection('#case-study'); }}>Case Study</a>
-          <a href="/#services" onClick={(e) => { e.preventDefault(); scrollToSection('#services'); }}>Services</a>
-          <a href="/#portfolio" onClick={(e) => { e.preventDefault(); scrollToSection('#portfolio'); }}>Portfolio</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('#case-study'); }}>Case Study</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('#services'); }}>Services</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('#portfolio'); }}>Portfolio</a>
 
           <a href="https://discord.gg/GJWWBMdN" className="btn btn-primary nav-cta mobile-only">
             Discord
